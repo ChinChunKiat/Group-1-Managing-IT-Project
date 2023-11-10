@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="description" content="KPI Assignment System"/>
+	<meta name="keywords" content="HTML5, tags"/>
+	<meta name="author" content="Albert Lee Kai Xian"/>
+	<link rel="stylesheet" type="text/css" href="style/style1.css">
+
+	<title>Index</title>
+
+</head>
+
+<body>
+	<?php
+    //initialise value 	
+		$servername = "localhost";
+		$username = "root";
+		$password = "";
+		$dbname = "pasti_nyala_db";
+		
+		//connect to database server
+		$conn = @mysqli_connect($servername,$username,$password);
+
+		if($_SERVER["REQUEST_METHOD"] == "POST"){
+            include "include/connection.php";
+            if(isset($_POST["SubUserID"]) && (!empty($_POST["SubUserID"]))){
+                $nameClr = $_POST["SubUserID"];
+            }
+
+            if(isset($_POST["SubModuleName"]) && (!empty($_POST["SubModuleName"]))){
+                $ModuleClr = $_POST["SubModuleName"];;
+            }
+
+            if(isset($_POST["SubDescription"]) && (!empty($_POST["SubDescription"]))){
+                $DescriptionClr = $_POST["SubDescription"];
+            }
+
+            if(isset($_POST["CreateSubDate"]) && (!empty($_POST["CreateSubDate"]))){
+                $DateClr = $_POST["CreateSubDate"];
+            }
+
+            $sql = "SELECT * FROM module_table WHERE staff_id = '$nameClr'";
+			$result = mysqli_query($conn,$sql);
+            $num_result = mysqli_num_rows($result);
+			if($num_result >= 1){
+				if(isset($nameClr, $ModuleClr, $DescriptionClr,$DateClr)){
+                    $insert_1 = insert_in_submodule_table($nameClr, $ModuleClr, $DescriptionClr,$DateClr,$conn);
+                        mysqli_close($conn);
+                }
+			}
+            else{
+                $idErr = "Staff ID already exist!";
+            }
+		}
+
+        function insert_in_submodule_table($nameClr, $ModuleClr, $DescriptionClr,$DateClr,$conn){
+			$sql="INSERT submodule_table(staff_id,submodule_name,submodule_description,module_date)VALUES('$nameClr','$ModuleClr','$DescriptionClr','$DateClr')";
+			if(mysqli_query($conn,$sql)){
+				return True;
+			}
+			else{
+				return False;
+			}
+		}
+	?>
+	
+    <header>
+		<h1>Sub module</h1>
+	</header>
+	
+	<section>
+		<form method="post" action= "<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+			<fieldset>
+                <p><label for="sID">User ID: </label>
+				<input type="text" id="sID" name="SubUserID"></input></p>
+
+                <p><label for="fname">Sub-Module Name: </label>
+				<input type="text" id="fname" name="SubModuleName"  maxlength="50"></span></input></p>
+
+                <p><label for="fname">Sub-Module Description: </label>
+				<input type="text" id="fname" name="SubDescription"  maxlength="50"></input></p>
+
+                <p><label for="fname">Date: </label>
+				<input type="text" id="fname" name="CreateSubDate"  maxlength="10"></input></p>
+
+				<p><button type="submit" value="submit">Add Staff</button></p>
+			</fieldset>
+		</form>
+	</section>	
+</body>
+</html>
