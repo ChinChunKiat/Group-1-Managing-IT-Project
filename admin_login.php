@@ -55,7 +55,7 @@ $conn->close();
 
 <body>
     <div class="container">
-        <div class="row justify-content-center">
+        <div class="row"> <!-- Remove justify-content-center to align left -->
             <div class="col-md-4 login-container">
                 <h2 class="text-center">Admin Login</h2>
                 <?php if (isset($error_message)) : ?>
@@ -70,7 +70,7 @@ $conn->close();
                         <label for="password">Password:</label>
                         <input type="password" class="form-control" name="password" required>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group mb-3"> <!-- Add margin-bottom to the form group -->
                         <input type="submit" class="btn btn-primary btn-block" value="Login">
                     </div>
                 </form>
