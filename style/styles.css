@@ -1,5 +1,9 @@
 body {
     background-color: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Set height to 100% of the viewport height */
 }
 
 .login-container {
@@ -7,5 +11,8 @@ body {
     color: #ffffff;
     padding: 20px;
     border-radius: 10px;
-    margin-top: 50px;
+}
+
+.form-group {
+    margin-bottom: 15px; /* Add margin between form groups */
 }
