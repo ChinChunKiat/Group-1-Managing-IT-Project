@@ -1,0 +1,85 @@
+#nav-bar {
+    background-color: #434343;
+}
+
+body {
+    margin: 0%;
+    padding: 0%;
+}
+
+/* .right_side{} */
+
+.intro-text {
+    color: white;
+    padding: 30% 10% 10% 10%;
+}
+
+#user_form {
+    background-color: #434343;
+}
+
+.button_choosen {
+    padding: 10% 10% 10% 10%;
+}
+.Login-As {
+    color: white;
+}
+
+.register-button {
+    display: inline-flex;
+    height: 40px;
+    width: 150px;
+    border-radius: 3%;
+    margin: 20px 20px 20px 20px;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.circle-3 {
+    width: 0%;
+    height: 0%;
+    opacity: 0;
+    line-height: 40px;
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+    transition: all .5s ease-Out;
+    top: 20px;
+    left: 70px;
+}
+
+#input-3 {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-color: white;
+    margin-left: auto;
+    border: 2px solid white;
+}
+
+#input-3 a {
+    position: relative;
+    transition: all .45s ease-Out;
+    color: white;
+}
+
+#input-3:hover .circle-3 {
+    width: 200%;
+    height: 500%;
+    opacity: 1;
+    top: -70px;
+    left: -70px;
+}
+
+#input-3:hover {
+    border: 2px solid #434343;
+}
+
+#input-3:hover a {
+    color: #434343;
+    text-decoration: none;
+}
+
