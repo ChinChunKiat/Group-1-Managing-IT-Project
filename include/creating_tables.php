@@ -58,6 +58,14 @@ if ($conn->query($sql) === TRUE) {
     echo "Error creating table 'user_information': " . $conn->error . "<br>";
 }
 
+// CREATE TABLE Module (
+//     module_id INT AUTO_INCREMENT PRIMARY KEY,
+//     module_name VARCHAR(255) NOT NULL,
+//     module_code VARCHAR(20) NOT NULL,
+//     module_description TEXT,
+//     department_id INT,
+//     FOREIGN KEY (department_id) REFERENCES Department(department_id)
+// );
 // Close connection
 $conn->close();
 ?>
