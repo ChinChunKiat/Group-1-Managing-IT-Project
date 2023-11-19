@@ -1,0 +1,95 @@
+body {
+    background-image: url('background.png');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Disable scrolling */
+}
+
+.container {
+    border-radius: 1rem;
+}
+
+.col-md-5 {
+    background: #343a40;
+    border-radius: 1rem;
+    padding: 20px;
+}
+
+.button-choose {
+    display: flex;
+    flex-direction: column;
+}
+
+.register-button {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: #555;
+    padding: 10px;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Adding transition effect */
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-right: 10px;
+}
+
+.register-button:hover {
+    background-color: #777; /* Change color on hover */
+}
+
+.register-button a {
+    text-decoration: none;
+    color: white;
+}
+
+.logo-section {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 20px;
+    margin-top: 10%;
+}
+
+.logo {
+    /* Add your logo styling here */
+    width: 100%;
+    height: auto;
+}
+
+.welcome-box {
+    background: #343a40;
+    border-radius: 1rem;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.welcome-heading {
+    margin-bottom: 20px;
+    color: white;
+}
+
+.register-button button {
+    text-decoration: none;
+    color: white;
+    background-color: #555;
+    padding: 10px;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.register-button button:hover {
+    background-color: #777;
+}
+

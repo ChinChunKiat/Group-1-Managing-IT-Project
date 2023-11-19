@@ -1,0 +1,56 @@
+body {
+    background-image: url('background.png');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow: auto; /* Make the body scrollable */
+}
+
+.register-container {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px; /* Add margin to the container */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Additional styles specific to the registration page */
+.register-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.register-container p {
+    text-align: center;
+}
+
+.register-container form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.register-container select,
+.register-container input {
+    margin-bottom: 10px;
+}
+
+.register-container .btn {
+    margin-top: 10px;
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+}
