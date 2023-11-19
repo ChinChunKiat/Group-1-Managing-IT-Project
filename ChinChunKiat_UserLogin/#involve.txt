@@ -1,7 +1,0 @@
-1.index.php
-2.user.php
-3.user_login.php
-4.index_home.php
-5.include/connection.php
-6.include/database.php
-6.include/insert_a_dummy_user.php
